@@ -27,6 +27,8 @@ public class GameC : MonoBehaviour
     public bool allowRedo = true;
     public bool allowGiveUp = false;
 
+    public Image helpBg;
+
     internal Button winButton;
     internal String winBTname = "winb";
     internal Text winText;
@@ -42,6 +44,7 @@ public class GameC : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        helpBg.enabled = false;
         FindObjectOfType<AudioManager>().Play("dawn");
         _waitScreen = GameObject.Find(_WSObj).GetComponent<WaitScreen>();
         _waitScreenMain = GameObject.Find(_WSMainObj).GetComponent<WaitScreen>();
@@ -165,16 +168,20 @@ public class GameC : MonoBehaviour
         bottomLock = false;
     }
 
-    public void help()
+    public void Help()
     {
         if (showHelp)
         {
+            PressButtom();
             helpText.gameObject.SetActive(false);
+            helpBg.enabled = false;
             showHelp = false;
         }
         else
         {
+            PressButtom();
             showHelp = true;
+            helpBg.enabled = true;
             helpText.gameObject.SetActive(true);
         }
     }

@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bca98f68-2b93-42b7-9afe-bbf5fb357009" name="Default Changelist" comment="" />
+    <list default="true" id="bca98f68-2b93-42b7-9afe-bbf5fb357009" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.t1/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.t1/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.t1/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.t1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.t1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/GameC.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GameC.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/cube.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/cube.unity" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Script/CamPosi.cs" root0="FORCE_HIGHLIGHTING" />
@@ -51,8 +60,8 @@
         <option value="$PROJECT_DIR$/Assets/Script/Sound.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Logic.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/AudioManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/GameC.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Move.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/GameC.cs" />
       </list>
     </option>
   </component>
@@ -66,6 +75,8 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="Rider.SolutionExplorerActivator" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TWShift.3" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -135,6 +146,7 @@
       <workItem from="1598878998870" duration="15989000" />
       <workItem from="1598994180750" duration="1736000" />
       <workItem from="1600467231399" duration="848000" />
+      <workItem from="1603124467013" duration="903000" />
     </task>
     <servers />
   </component>
@@ -143,6 +155,17 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
     <state width="2517" height="492" key="GridCell.Tab.0.bottom" timestamp="1591855696481">
       <screen x="0" y="0" width="2560" height="1400" />
