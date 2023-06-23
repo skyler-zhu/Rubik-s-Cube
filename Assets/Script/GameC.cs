@@ -70,7 +70,7 @@ public class GameC : MonoBehaviour
         _waitScreenMain.FadeOut();
     }
 
-    public void PressButtom()
+    public void PressButtom_sound()
     {
         FindObjectOfType<AudioManager>().Play("ding");
     }
@@ -172,14 +172,14 @@ public class GameC : MonoBehaviour
     {
         if (showHelp)
         {
-            PressButtom();
+            PressButtom_sound();
             helpText.gameObject.SetActive(false);
             helpBg.enabled = false;
             showHelp = false;
         }
         else
         {
-            PressButtom();
+            PressButtom_sound();
             showHelp = true;
             helpBg.enabled = true;
             helpText.gameObject.SetActive(true);
