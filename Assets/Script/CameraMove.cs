@@ -12,11 +12,15 @@ public class CameraMove : MonoBehaviour
     private Vector3 _prePosi;
     private Touch _touch;
     [SerializeField] private int moveSpeed = 180;
+    private float _subScreenX;
+    private float _subScreenY;
     
     // Start is called before the first frame update
     void Start()
     {
         _currentMoveCam = GameObject.Find(_currentMoveCamName).GetComponent<Camera>();
+        _subScreenX = Screen.width * 0.26f;
+        _subScreenY = Screen.height * 0.5f;
     }
 
     // Update is called once per frame
@@ -24,7 +28,7 @@ public class CameraMove : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if (Input.mousePosition.x <= 400 && Input.mousePosition.y <= 445)
+            if (Input.mousePosition.x <= _subScreenX && Input.mousePosition.y <= _subScreenY)
             {
                 _prePosi = _currentMoveCam.ScreenToViewportPoint(Input.mousePosition);
                 _inSubScreen = true;
@@ -44,7 +48,7 @@ public class CameraMove : MonoBehaviour
                 _prePosi = _currentMoveCam.ScreenToViewportPoint(Input.mousePosition);
             }
 
-            if (Input.mousePosition.x >= 400 || Input.mousePosition.y >= 445)
+            if (Input.mousePosition.x >= _subScreenX || Input.mousePosition.y >= _subScreenY)
             {
                 _inSubScreen = false;
             }

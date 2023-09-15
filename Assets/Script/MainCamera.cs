@@ -14,10 +14,14 @@ public class MainCamera : MonoBehaviour
     public float speed = 0.5f;
     public float dirX = -1;
     public float dirY = -1;
+    private float _subScreenX;
+    private float _subScreenY;
 
     private void Start()
     {
         origRot = obj.transform.eulerAngles;
+        _subScreenX = Screen.width * 0.32f;
+        _subScreenY = Screen.height * 0.5f;
     }
 
     private void Update()
@@ -33,7 +37,7 @@ public class MainCamera : MonoBehaviour
         
         foreach (Touch touch in Input.touches)
         {
-            if (touch.position.x < 400 && touch.position.y < 500)
+            if (touch.position.x < _subScreenX && touch.position.y < _subScreenY)
             {
                 if (touch.phase == TouchPhase.Began)
                 {

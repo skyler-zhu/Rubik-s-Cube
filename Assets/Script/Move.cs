@@ -95,6 +95,9 @@ namespace Script
         private Touch _touch;
         
         private bool _inSubScreen;
+
+        private float _subScreenX;
+        private float _subScreenY;
     
         private String _currentMoveCamName = "TestCam";
         private Vector3 _prePosi;
@@ -112,6 +115,8 @@ namespace Script
             _movingCube = false;
             _logic = GameObject.Find(_logicObj).GetComponent<Logic>();
             _mc = GameObject.Find(_MCObj).GetComponent<MC>();
+            _subScreenX = Screen.width * 0.32f;
+            _subScreenY = Screen.height * 0.5f;
         }
         
         //把方块加到对应核心, 可优化
@@ -2497,7 +2502,7 @@ namespace Script
                         _prePosi = _currentMoveCam.ScreenToViewportPoint(touch.position);
                     }
 
-                    if (touch.position.x >= 400 || touch.position.y >= 445)
+                    if (touch.position.x >= _subScreenX || touch.position.y >= _subScreenY)
                     {
                         _inSubScreen = false;
                     }
@@ -2527,7 +2532,7 @@ namespace Script
                     break;
 
                 case TouchPhase.Moved:
-                    if (touch.position.x <= 400)
+                    if (touch.position.x <= _subScreenX)
                     {
                         _inMainScreen = false;
                     }
@@ -2582,14 +2587,14 @@ namespace Script
             if (Input.touchCount == 1)
             {
                 _touch = Input.GetTouch(0);
-                if (_touch.position.x > 400)
+                if (_touch.position.x > _subScreenX)
                 {
                     if (!_moveLock)
                     {
                         HandleCube(_touch);
                     }
                 }
-                else if (_touch.position.x <= 400 && _touch.position.y <= 445)
+                else if (_touch.position.x <= _subScreenX && _touch.position.y <= _subScreenY)
                 {
                     HandleCam(_touch);
                 }
@@ -2665,7 +2670,7 @@ namespace Script
 
             if (Input.GetMouseButtonDown(0) && !_moveLock)
             {
-                if (Input.mousePosition.x > 400)
+                if (Input.mousePosition.x > _subScreenX)
                 {
                     Ray camRay = _currentCam.ScreenPointToRay (Input.mousePosition);
                     if (Physics.Raycast(camRay, out _hit))
@@ -2681,7 +2686,7 @@ namespace Script
 
             if (Input.GetMouseButton(0) && !_moveLock)
             {
-                if (Input.mousePosition.x <= 400)
+                if (Input.mousePosition.x <= _subScreenX)
                 {
                     _inMainScreen = false;
                 }

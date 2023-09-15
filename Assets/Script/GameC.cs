@@ -206,5 +206,9 @@ public class GameC : MonoBehaviour
                 bottomLock = true;
             }
         }
+        if (Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }
     }
 }
